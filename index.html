@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Drum Kit App</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="src/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="src/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="src/favicons/favicon-16x16.png">
+    <link rel="manifest" href="src/favicons/site.webmanifest">
+    <link rel="mask-icon" href="src/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="src/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="msapplication-config" content="src/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" type="text/css" href="src/css/drumKit.css">
+  </head>
+
+  <body>
+    <main>
+      <div id="video-wrapper">
+        <video loop muted autoplay preload="auto">
+          <source src="src/img/Music Equalizer For Music Party.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <div id="drum-kit">
+        <div data-keycode="65" class="key key-left">
+          <kbd>A</kbd>
+          <span class="sound">boom</span>
+        </div>
+        <div data-keycode="83" class="key key-left">
+          <kbd>S</kbd>
+          <span class="sound">clap</span>
+        </div>
+        <div data-keycode="68" class="key key-left">
+          <kbd>D</kbd>
+          <span class="sound">crash</span>
+        </div>
+        <div data-keycode="70" class="key key-left">
+          <kbd>F</kbd>
+          <span class="sound">hihat-close</span>
+        </div>
+        <div data-keycode="71" class="key key-right">
+          <kbd>G</kbd>
+          <span class="sound">hihat-open</span>
+        </div>
+        <div data-keycode="72" class="key key-right">
+          <kbd>H</kbd>
+          <span class="sound">kick</span>
+        </div>
+        <div data-keycode="74" class="key key-right">
+          <kbd>J</kbd>
+          <span class="sound">ride</span>
+        </div>
+        <div data-keycode="75" class="key key-right">
+          <kbd>K</kbd>
+          <span class="sound">snare</span>
+        </div>
+        <div data-keycode="76" class="key key-top">
+          <kbd>L</kbd>
+          <span class="sound">tom-high</span>
+        </div>
+        <div data-keycode="186" class="key key-bottom k-b1">
+          <kbd>Ö</kbd>
+          <span class="sound">tom-low</span>
+        </div>
+        <div data-keycode="222" class="key key-bottom k-b2">
+          <kbd>Ä</kbd>
+          <span class="sound">tom-mid</span>
+        </div>
+      </div>
+    
+      <audio data-keycode="65" src="src/audio/drum-kit_sounds_boom.wav"></audio>
+      <audio data-keycode="83" src="src/audio/drum-kit_sounds_clap.wav"></audio>
+      <audio data-keycode="68" src="src/audio/drum-kit_sounds_crash.wav"></audio>
+      <audio data-keycode="70" src="src/audio/drum-kit_sounds_hihat-close.wav"></audio>
+      <audio data-keycode="71" src="src/audio/drum-kit_sounds_hihat-open.wav"></audio>
+      <audio data-keycode="72" src="src/audio/drum-kit_sounds_kick.wav"></audio>
+      <audio data-keycode="74" src="src/audio/drum-kit_sounds_ride.wav"></audio>
+      <audio data-keycode="75" src="src/audio/drum-kit_sounds_snare.wav"></audio>
+      <audio data-keycode="76" src="src/audio/drum-kit_sounds_tom-high.wav"></audio>
+      <audio data-keycode="186" src="src/audio/drum-kit_sounds_tom-low.wav"></audio>
+      <audio data-keycode="222" src="src/audio/drum-kit_sounds_tom-mid.wav"></audio>
+    </main>
+
+    <script src="drumKit.js" defer></script>
+
+  </body>
+
+</html>

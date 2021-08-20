@@ -1,0 +1,249 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Monospace, sans-serif;
+  font-size: 32px;
+  color: #FFF;
+}
+
+#video-wrapper {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#video-wrapper::after {
+  width: 0;
+  height: 0;
+  content: "";
+  position: absolute;
+  z-index: -99;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .15);
+}
+
+#video-wrapper video {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -99;
+}
+
+#drum-kit {
+  max-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+}
+
+.key {
+  border: 6px solid #151515;
+  border-radius: 10px;
+  margin: 2rem;
+  padding: 1rem .5rem;
+  font-size: 1.25rem;
+  width: 10.78rem;
+  text-align: center;
+  background: rgba(0, 0, 0, .45);
+  -webkit-transition: all .08s linear;
+  -o-transition: all .08s linear;
+  transition: all .08s linear;
+}
+
+.key:hover {
+  -webkit-box-shadow: rgb(0, 127, 255) 0 0 10px;
+          box-shadow: rgb(0, 127, 255) 0 0 10px;
+}
+
+.key-right {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  -webkit-transform: translateY(-708px);
+      -ms-transform: translateY(-708px);
+          transform: translateY(-708px);
+}
+
+.key-top {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-transform: translateY(-1435px);
+      -ms-transform: translateY(-1435px);
+          transform: translateY(-1435px);
+}
+
+.key-bottom {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.k-b1 {
+  position: absolute;
+  right: 220px;
+  bottom: -20px;
+}
+
+.k-b2 {
+  position: absolute;
+  left: 220px;
+  bottom: -20px;
+}
+
+kbd {
+  display: block;
+  font-size: 2.5rem;
+}
+
+.sound {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  color: #FFD133;
+}
+
+.playing {
+  border-color: #FFD133;
+  -webkit-box-shadow: #FFD133 0 0 1.5rem;
+          box-shadow: #FFD133 0 0 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .key {
+    font-size: 1rem;
+    width: 7rem;
+    margin: .9rem;
+  }
+  .key-left {
+    -webkit-transform: translateY(80px);
+        -ms-transform: translateY(80px);
+            transform: translateY(80px);
+  }
+  .key-right {
+    -webkit-transform: translateY(-474px);
+        -ms-transform: translateY(-474px);
+            transform: translateY(-474px);
+  }
+  .key-top {
+    -webkit-transform: translateY(-1110px);
+        -ms-transform: translateY(-1110px);
+            transform: translateY(-1110px);
+    width: 8.5rem;
+  }
+  .k-b1 {
+    right: 150px;
+    bottom: -8px;
+  }
+  .k-b2 {
+    left: 150px;
+    bottom: -8px;
+  }
+  kbd {
+    font-size: 2.3rem;
+  }
+  .sound {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .k-b1 {
+    right: 120px;
+    bottom: -8px;
+  }
+  .k-b2 {
+    left: 120px;
+    bottom: -8px;
+  }
+}
+
+@media (max-width: 500px) {
+  .key-left {
+    -webkit-transform: translateY(100px);
+        -ms-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+  .key-right {
+    -webkit-transform: translateY(-414px);
+        -ms-transform: translateY(-414px);
+            transform: translateY(-414px);
+  }
+  .key-top {
+    -webkit-transform: translateY(-1035px);
+        -ms-transform: translateY(-1035px);
+            transform: translateY(-1035px);
+    width: 8.5rem;
+  }
+  .k-b1 {
+    right: 90px;
+    bottom: -8px;
+  }
+  .k-b2 {
+    left: 90px;
+    bottom: -8px;
+  }
+  kbd {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 440px) {
+  .k-b1 {
+    right: 60px;
+    bottom: -8px;
+  }
+  .k-b2 {
+    left: 60px;
+    bottom: -8px;
+  }
+}
+
+@media (max-width: 380px) {
+  .k-b1 {
+    right: 30px;
+    bottom: -8px;
+  }
+  .k-b2 {
+    left: 30px;
+    bottom: -8px;
+  }
+}
+
+@media (max-width: 330px) {
+  .k-b1 {
+    right: 1px;
+    bottom: -8px;
+  }
+  .k-b2 {
+    left: 1px;
+    bottom: -8px;
+  }
+}
